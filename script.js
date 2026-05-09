@@ -66,3 +66,36 @@ if ("IntersectionObserver" in window) {
 } else {
   reveals.forEach((item) => item.classList.add("in-view"));
 }
+
+const zelleChip = document.getElementById("zelle-chip");
+const zelleModal = document.getElementById("zelle-modal");
+const zelleModalClose = document.getElementById("zelle-modal-close");
+
+if (zelleChip && zelleModal && zelleModalClose) {
+  const openModal = () => {
+    zelleModal.classList.add("is-open");
+    zelleModal.setAttribute("aria-hidden", "false");
+    zelleChip.setAttribute("aria-expanded", "true");
+  };
+
+  const closeModal = () => {
+    zelleModal.classList.remove("is-open");
+    zelleModal.setAttribute("aria-hidden", "true");
+    zelleChip.setAttribute("aria-expanded", "false");
+  };
+
+  zelleChip.addEventListener("click", openModal);
+  zelleModalClose.addEventListener("click", closeModal);
+
+  zelleModal.addEventListener("click", (event) => {
+    if (event.target === zelleModal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && zelleModal.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+}

@@ -211,6 +211,16 @@ a {
   font-weight: 600;
 }
 
+.payment-chip-button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.payment-chip-button:focus-visible {
+  outline: 2px solid rgba(214, 174, 99, 0.8);
+  outline-offset: 2px;
+}
+
 .payment-chip-primary {
   border-color: rgba(214, 174, 99, 0.52);
   background: rgba(214, 174, 99, 0.15);
@@ -229,10 +239,70 @@ a {
 }
 
 .payment-icon-zelle {
-  width: 1rem;
-  height: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
   border-radius: 0.25rem;
   flex: 0 0 auto;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 240ms ease;
+}
+
+.modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  width: min(100%, 24rem);
+  border-radius: 1.1rem;
+  border: 1px solid rgba(214, 174, 99, 0.35);
+  background: linear-gradient(145deg, #16120a, #070707);
+  padding: 1rem;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal-card h3 {
+  margin: 0.45rem 0 0;
+  font-size: 1.35rem;
+}
+
+.modal-number {
+  margin: 0.55rem 0 0;
+  color: var(--gold);
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.modal-note {
+  margin: 0.35rem 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.92rem;
 }
 
 .tags span {

@@ -52,7 +52,7 @@
                 </svg>
                 <span>Cash (Preferred)</span>
               </span>
-              <span class="payment-chip">
+              <button class="payment-chip payment-chip-button" type="button" id="zelle-chip" aria-haspopup="dialog" aria-controls="zelle-modal" aria-expanded="false">
                 <svg class="payment-icon-zelle" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
                   <path fill="#a100ff" d="M35 42H13c-3.866 0-7-3.134-7-7V13c0-3.866 3.134-7 7-7h22c3.866 0 7 3.134 7 7v22c0 3.866-3.134 7-7 7z"></path>
                   <path fill="#fff" d="M17.5 18.5h14c.552 0 1-.448 1-1V15c0-.552-.448-1-1-1h-14c-.552 0-1 .448-1 1v2.5c0 .552.448 1 1 1z"></path>
@@ -62,7 +62,7 @@
                   <path fill="#fff" d="M16.578 30.938H22l10.294-12.839c.178-.222.019-.552-.266-.552H26.5L16.275 30.298c-.21.255-.028.64.303.64z"></path>
                 </svg>
                 <span>Zelle</span>
-              </span>
+              </button>
             </div>
           </div>
 
@@ -181,6 +181,16 @@
       </div>
     </section>
   </main>
+
+  <div class="modal-backdrop" id="zelle-modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="zelle-modal-title">
+      <button class="modal-close" type="button" id="zelle-modal-close" aria-label="Close">x</button>
+      <p class="kicker">Zelle Payment</p>
+      <h3 id="zelle-modal-title">Send To This Number</h3>
+      <p class="modal-number">929-239-0050</p>
+      <p class="modal-note">Use this number for Zelle transfer.</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
