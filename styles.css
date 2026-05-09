@@ -352,6 +352,12 @@ h2 {
   font-weight: 800;
 }
 
+.service-index svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
+}
+
 .service-card h3 {
   margin: 0;
   font-size: 1rem;
@@ -423,6 +429,9 @@ h2 {
 }
 
 .contact-lines p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   margin: 0;
   border-radius: 0.95rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -430,6 +439,13 @@ h2 {
   padding: 0.8rem;
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.93rem;
+}
+
+.contact-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  fill: var(--gold);
 }
 
 .btn-full {
