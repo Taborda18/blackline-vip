@@ -154,6 +154,12 @@ a {
   fill: currentColor;
 }
 
+.phone-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
 .btn-primary {
   color: #050505;
   background: var(--gold);
@@ -242,19 +248,20 @@ a {
 .vehicle-mock {
   margin-bottom: 0.65rem;
   width: min(100%, 21.8rem);
+  height: 8.6rem;
   border-radius: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: linear-gradient(90deg, #070707, #1c1c1c, #050505);
-  padding: 0.7rem 0.9rem;
+  padding: 0;
+  overflow: hidden;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 .vehicle-image {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: 8.8rem;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.55));
 }
 
@@ -488,8 +495,8 @@ h2 {
     padding: 2rem;
   }
 
-  .vehicle-image {
-    max-height: 10.8rem;
+  .vehicle-mock {
+    height: 10.2rem;
   }
 }
 
