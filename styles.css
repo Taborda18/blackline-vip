@@ -180,6 +180,61 @@ a {
   gap: 0.5rem;
 }
 
+.payment-methods {
+  margin-top: 1rem;
+}
+
+.payment-title {
+  margin: 0 0 0.45rem;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.payment-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.payment-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  padding: 0.48rem 0.78rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.payment-chip-primary {
+  border-color: rgba(214, 174, 99, 0.52);
+  background: rgba(214, 174, 99, 0.15);
+  color: #f5ddb2;
+}
+
+.payment-icon {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: currentColor;
+}
+
+.payment-icon-cash {
+  width: 1rem;
+  height: 1rem;
+}
+
+.payment-icon-zelle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  flex: 0 0 auto;
+}
+
 .tags span {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(255, 255, 255, 0.05);
